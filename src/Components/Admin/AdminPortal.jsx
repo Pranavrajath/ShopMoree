@@ -12,7 +12,7 @@ const AdminPortal = () => {
         <Routes>
             <Route element={<Home/>} path='/'/>
             <Route element={<Products/>} path='/products'/>
-            <Route element={<ViewMore/>} path='/products/viewmore'/>
+            <Route element={<ViewMore/>} path='/viewmore/:id'/>
         </Routes>
     </>
   )

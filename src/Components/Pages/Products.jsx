@@ -1,5 +1,6 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 
 const Products = () => {
   const[products , setProducts] = useState([])
@@ -12,9 +13,9 @@ const Products = () => {
   useEffect(()=>{
     fetchApi()
   },[])
-
+  const navigate = useNavigate()
   const viewMore = (prodid) =>{
-    alert(prodid)
+    navigate(`/adminportal/viewmore/${prodid}`)
   }
   return (
     <div className='products'>
@@ -34,7 +35,7 @@ const Products = () => {
                 <h6>{rate}</h6>
               </div>
               <div className="price">
-                Rs. {price *90} 
+                Rs. {Math.round(price *90)}.00 
               </div>
             </div>
             <button onClick={()=>viewMore(id)}>View More</button>
