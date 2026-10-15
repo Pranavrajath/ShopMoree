@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import AdminLogin from "./Admin/AdminLogin";
 import UsersLogin from "./Users/UsersLogin";
 import { Link } from "react-router-dom";
-import loginBackground from "../assets/Images/loginBackground.jpg";
 
 const LandingPage = () => {
   const [bool, setBool] = useState(true);

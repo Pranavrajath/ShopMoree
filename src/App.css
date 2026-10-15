@@ -34,7 +34,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    
+
     .toggle {
       height: 7vh;
       width: 40%;
@@ -131,18 +131,17 @@
         transform: rotateY(180deg);
       }
     }
-      .forgotpass {
-        a {
-          text-decoration: none;
-          color: white;
-          &:hover {
-            text-decoration: underline;
-          }
+    .forgotpass {
+      a {
+        text-decoration: none;
+        color: white;
+        &:hover {
+          text-decoration: underline;
         }
       }
     }
   }
-
+}
 
 @media screen and (min-width: 0px) and (max-width: 800px) {
   .landing_page {
@@ -170,6 +169,121 @@
             font-size: 20px;
           }
         }
+      }
+    }
+  }
+}
+
+.navbar {
+  display: flex;
+  .logo {
+    height: 15vh;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    img {
+      height: 13vh;
+      width: 8vw;
+      margin: 0 3vw;
+    }
+  }
+  .links {
+    height: 15vh;
+    width: 50%;
+    ul {
+      height: 100%;
+      display: flex;
+      list-style: none;
+      align-items: center;
+      justify-content: space-evenly;
+
+      li {
+        a {
+          text-decoration: none;
+          color: black;
+          font-size: 20px;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}
+
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  flex: 0 0 20%;
+  gap: 30px;
+  margin-top: 5vh;
+  padding-bottom: 5vh;
+  .card {
+    width: 20%;
+    border: 1px solid black;
+    padding: 1.5vh;
+    border-radius: 20px;
+    box-shadow: 0 0 20px;
+    margin: 2vh 0;
+    h6 {
+      text-align: end;
+      color: gray;
+    }
+    .image {
+      img {
+        display: block;
+        height: 20vh;
+        width: 15vw;
+        margin: 2vh auto;
+        filter: drop-shadow(0 0 10px black);
+      }
+    }
+    h2 {
+      font-size: 20px;
+      margin: 2vh;
+      height: 11vh;
+    }
+    .rateandprice {
+      display: flex;
+      justify-content: space-between;
+      .rate {
+        h5 {
+          font-size: 15px;
+        }
+        h6 {
+          text-align: left;
+          font-size: 13px;
+          font-weight: 500;
+          border: 1px solid black;
+          height: 4vh;
+          width: 3vw;
+          align-content: center;
+          text-align: center;
+          border-radius: 10px;
+          background-color: rgb(183, 182, 182);
+          color: black;
+          font-weight: bold;
+        }
+      }
+      .price {
+        font-weight: bold;
+      }
+    }
+    button {
+      display: block;
+      margin: 1vh auto;
+      border: 2px solid #08110d;
+      width: 10vw;
+      height: 5vh;
+      border-radius: 20px;
+      font-weight: bold;
+      color: #10b981;
+      &:hover {
+        background: #059669;
+        color: #080f0c;
+      }
+      transition: all 0.6s;
+      &:hover {
+        transform: scale(1.1);
       }
     }
   }

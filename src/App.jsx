@@ -9,7 +9,7 @@ const App = () => {
     <>
     <Routes>
       <Route element={<LandingPage/>} path = '/'/>
-      <Route element={<AdminPortal/>} path='/adminportal'/>
+      <Route element={<AdminPortal/>} path='/adminportal/*'/>
     </Routes>
     </>
   )
