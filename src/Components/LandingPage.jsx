@@ -8,6 +8,7 @@ const LandingPage = () => {
   
   const handleBool = () => {
     setBool(!bool);
+    
   };
   return (
     <>

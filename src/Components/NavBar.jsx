@@ -17,7 +17,7 @@ const NavBar = () => {
             <NavLink to="/adminportal/products">Products</NavLink>
           </li>
           <li>
-            <NavLink>items3</NavLink>
+            <NavLink to="/adminportal/addproduct">Add Product</NavLink>
           </li>
           <li>
             <NavLink>items4</NavLink>

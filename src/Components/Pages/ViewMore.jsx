@@ -13,7 +13,7 @@ const ViewMore = () => {
       `http://localhost:4000/products/${prodid}`,
     );
     setProduct(apiresid.data);
-    toast.success("Data Found")
+    toast.info("All Data")
   };
   useEffect(() => {
     viewmorecall();
@@ -25,6 +25,18 @@ const ViewMore = () => {
   const close = () => {
     navi("/adminportal/products");
   };
+
+  const del = async (id)=>{
+    let bool = window.confirm("Do you want to delete this product")
+    if(bool){
+      await axios.delete(`http://localhost:4000/products/${id}`)
+      toast.error("Product Deleted")
+      navi('/adminportal/products')
+    }
+    else{
+      toast.warn("Product Not Deleted")
+    }
+  }
 
   return (
     <div className="viewmore">
@@ -50,7 +62,7 @@ const ViewMore = () => {
             <div className="price">Rs. {Math.round(price * 90)}.00</div>
           </div>
           <div className="btn">
-            <button>Delete</button>
+            <button onClick={()=>del(id)}>Delete</button>
           </div>
         </div>
       </div>
