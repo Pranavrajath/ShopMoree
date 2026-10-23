@@ -229,5 +229,16 @@
       }
     }
   ],
+  "UserDetails": [
+    {
+      "id": "8IJyZ4UuqIw",
+      "username": "Pranav Rajath M",
+      "contact": "6363050497",
+      "email": "pranavrajath0@gmail.com",
+      "password": "Pranav@1200",
+      "dob": "2004-04-01",
+      "place": "bangalore"
+    }
+  ],
   "$schema": "./node_modules/json-server/schema.json"
 }

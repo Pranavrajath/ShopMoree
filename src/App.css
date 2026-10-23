@@ -201,7 +201,7 @@
         a {
           text-decoration: none;
           color: black;
-          font-size: 20px;
+          font-size: 17px;
           font-weight: bold;
         }
       }
@@ -217,7 +217,7 @@
     width: 12vw;
     border-radius: 20px;
     background-color: #10b981;
-    color: #08110d;
+    color: white;
     font-weight: bold;
     font-size: 18px;
   }
@@ -303,8 +303,23 @@
     }
   }
 }
-.category{
-  
+.category {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 5vh;
+  button {
+    padding: 2vh 2vw;
+    background-color: #10b981;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 20px;
+    box-shadow: 0 0 20px;
+    transition: all 0.2s ease-in-out;
+    &:focus {
+      transform: translateY(-15px);
+    }
+  }
 }
 
 .viewmore {
@@ -1600,13 +1615,12 @@
         text-align: center;
         margin: 2vh 0;
       }
-      button{
+      button {
         border: none;
         background-color: transparent;
         color: red;
         font-size: 25px;
-        font-weight:bold;
-        
+        font-weight: bold;
       }
     }
     form {
@@ -1653,6 +1667,50 @@
           font-weight: bold;
           font-size: 18px;
           border: 2px solid #103d31;
+        }
+      }
+    }
+  }
+}
+
+.register {
+  h1 {
+    
+  }
+  .container {
+    margin: auto;
+    margin-top: 5vh;
+    form {
+      border: 1px solid black;
+      width: 80%;
+      padding: 2vh 2vw;
+      background-color: rgba(128, 128, 128, 0.631);
+      color: white;
+      font-weight: bold;
+      border-radius: 20px;
+      box-shadow: 0 0 20px black;
+      label {
+        display: block;
+        margin: 4vh auto;
+        display: flex;
+        justify-content: space-between;
+        input {
+          height: 5vh;
+          width: 15vw;
+          border-radius: 20px;
+          padding: 1vh 1vw;
+        }
+      }
+      .btn {
+        height: 10vh;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        button {
+          height: 5vh;
+          width: 10vw;
+          background-color: white;
         }
       }
     }

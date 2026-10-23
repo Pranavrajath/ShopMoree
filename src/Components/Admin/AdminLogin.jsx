@@ -15,7 +15,7 @@ const AdminLogin = () => {
       [key]: val
     });
 
-    // Remove error styling while typing
+    // Remove error styling while:typing
     ele.target.style.cssText = "";
   };
 

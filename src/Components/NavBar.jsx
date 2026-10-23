@@ -20,7 +20,7 @@ const NavBar = () => {
             <NavLink to="/adminportal/addproduct">Add Product</NavLink>
           </li>
           <li>
-            <NavLink>items4</NavLink>
+            <NavLink to='/adminportal/register'>User Register</NavLink>
           </li>
           <li>
             <NavLink>items5</NavLink>

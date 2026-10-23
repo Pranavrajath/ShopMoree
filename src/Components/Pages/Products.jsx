@@ -15,7 +15,7 @@ const Products = () => {
   const navigate = useNavigate();
   const viewMore = (prodid) => {
     navigate(`/adminportal/viewmore/${prodid}`);
-  };
+  }; 
 
 
   //Category
@@ -51,7 +51,7 @@ const Products = () => {
         <button
           onClick={() => {
             navigate("/adminportal/addproduct");
-          }}
+          }} 
         >
           Add Product
         </button>
