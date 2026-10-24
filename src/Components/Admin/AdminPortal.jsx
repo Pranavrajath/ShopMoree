@@ -6,6 +6,7 @@ import NavBar from '../NavBar'
 import ViewMore from '../Pages/ViewMore'
 import AddProduct from '../Pages/AddProduct'
 import UserRegistrationForm from './UserRegistrationForm'
+import RegistredUsers from './RegistredUsers'
 
 const AdminPortal = () => {
   return (
@@ -17,6 +18,7 @@ const AdminPortal = () => {
             <Route element={<ViewMore/>} path='/viewmore/:id'/>
             <Route element={<AddProduct/>} path='/addproduct'/>
             <Route element={<UserRegistrationForm/>} path='/register'/>
+            <Route element={<RegistredUsers/>} path='/usersdetails'/>
         </Routes>
     </>
   )

@@ -1,21 +1,21 @@
 import axios from "axios";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 
-const UserRegistrationForm =  () => {
-  const [userData , setUserData] = useState([])
-  const fetchAPI =async()=>{
-    let api = await axios.get('http://localhost:4000/UserDetails')
+const UserRegistrationForm = () => {
+  const [userData, setUserData] = useState([]);
+  const errmzg = useRef();
+  const navigate = useNavigate();
+  const fetchAPI = async () => {
+    let api = await axios.get("http://localhost:4000/UserDetails");
     setUserData(api.data);
-  }
-  useEffect(()=>{
-    fetchAPI()
-  },[])
-  
-  let allEmail = userData.map(ele=>ele.email)
-  console.log(allEmail);
-  
+  };
+  useEffect(() => {
+    fetchAPI();
+  }, []);
 
+  let allEmail = userData.map((ele) => ele.email);
 
   const [userDetails, setUserDetails] = useState({
     id: "",
@@ -32,24 +32,43 @@ const UserRegistrationForm =  () => {
     let val = e.target.value;
     setUserDetails({
       ...userDetails,
-      [key] : val
-    })
-    
+      [key]: val,
+    });
   };
 
-  const handleSubmit = async(e)=>{
-    e.preventDefault()
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
     try {
-      await axios.post(`http://localhost:4000/UserDetails`, userDetails)
-      toast.success(`User Registered`)
+      if (allEmail.includes(userDetails.email)) {
+        toast.error("Email already Exists");
+        errmzg.current.innerText = "Email is already present";
+      } else {
+        errmzg.current.innerText = "";
+        await axios.post(`http://localhost:4000/UserDetails`, userDetails);
+        toast.success(`User Registered`);
+        setUserDetails({
+          id: "",
+          username: "",
+          contact: "",
+          email: "",
+          password: "",
+          dob: "",
+          place: "",
+        });
+      }
     } catch (error) {
-      toast.error(`User is not added : ${error} `)
+      toast.error(`User is not added : ${error} `);
     }
-  }
+  };
   return (
     <>
       <div className="register">
-        <h1>UserRegistrationForm</h1>
+        <div className="head">
+          <h3>UserRegistrationForm</h3>
+          <button onClick={()=>navigate('/adminportal/usersdetails')}>Registered Users</button>
+        </div>
+
         <div className="container">
           <form action="" onSubmit={handleSubmit}>
             <label>
@@ -117,6 +136,7 @@ const UserRegistrationForm =  () => {
                 required
               />
             </label>
+            <h5 ref={errmzg} style={{ color: "red", textAlign: "end" }}></h5>
             <div className="btn">
               <button>Register</button>
             </div>

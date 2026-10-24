@@ -1674,7 +1674,25 @@
 }
 
 .register {
-  h1 {
+  .head {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 3vw;
+    h3 {
+    }
+    button {
+      height: 5vh;
+      width: 15vw;
+      background-color: #10b981;
+      color: white;
+      font-weight: bold;
+      border: none;
+      border-radius: 20px;
+      transition: all 0.3s;
+      &:hover {
+        transform: translateY(-6px);
+      }
+    }
   }
   .container {
     margin: auto;
@@ -1710,6 +1728,48 @@
           height: 5vh;
           width: 10vw;
           background-color: white;
+        }
+      }
+    }
+  }
+}
+
+.registereduser {
+  h2 {
+  }
+  table {
+    border: none;
+    width: 80%;
+    margin: 5vh auto;
+    border-collapse: collapse;
+    text-align: center;
+    margin-bottom: 10vh;
+    box-shadow: 0 0 50px rgba(8, 146, 193, 0.984);
+    td,
+    th {
+      padding: 2vh 1vw;
+    }
+    thead {
+      background-color: rgba(8, 146, 193, 0.984);
+      color: aliceblue;
+    }
+    tbody {
+      tr:nth-child(even) {
+        background-color: rgba(8, 147, 193, 0.14);
+      }
+      tr {
+        td {
+          button {
+            border: none;
+            background: none;
+            cursor: pointer;
+            &:hover {
+              transform: scale(0.9);
+            }
+            &:active {
+              color: aqua;
+            }
+          }
         }
       }
     }
@@ -2165,5 +2225,39 @@
   }
   .sm-product-grid {
     gap: 8px;
+  }
+}
+
+/* Regrestedusers table */
+@media (max-width: 700px) {
+  .registereduser table {
+    width: 95%;
+    margin: 3vh auto 6vh;
+    font-size: 12px;
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+  .registereduser table td,
+  .registereduser table th {
+    padding: 1.5vh 3vw;
+  }
+  .registereduser table tbody tr td button {
+    padding: 4px;
+  }
+}
+@media (min-width: 701px) and (max-width: 1100px) {
+  .registereduser table {
+    width: 90%;
+    font-size: 14px;
+  }
+  .registereduser table td,
+  .registereduser table th {
+    padding: 1.5vh 2vw;
+  }
+}
+@media (min-width: 1101px) {
+  .registereduser table {
+    width: 80%;
   }
 }

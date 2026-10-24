@@ -22,12 +22,7 @@ const NavBar = () => {
           <li>
             <NavLink to='/adminportal/register'>User Register</NavLink>
           </li>
-          <li>
-            <NavLink>items5</NavLink>
-          </li>
-          <li>
-            <NavLink to='/'>LogOut</NavLink>
-          </li>
+          
         </ul>
       </div>
     </div>

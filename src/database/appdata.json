@@ -238,6 +238,15 @@
       "password": "Pranav@1200",
       "dob": "2004-04-01",
       "place": "bangalore"
+    },
+    {
+      "id": "1OD2d6OOTTI",
+      "username": "dinga",
+      "contact": "987275722",
+      "email": "dinga@gmail.com",
+      "password": "12332",
+      "dob": "1999-02-22",
+      "place": "Mumbai"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"
