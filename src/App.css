@@ -1675,7 +1675,6 @@
 
 .register {
   h1 {
-    
   }
   .container {
     margin: auto;
@@ -1714,5 +1713,457 @@
         }
       }
     }
+  }
+}
+
+/* =========================================================
+   RESPONSIVE ADDITIONS
+   Existing CSS rules and properties above are unchanged.
+   ========================================================= */
+/* Large laptops and desktop screens */
+@media screen and (min-width: 1301px) {
+  .container {
+    width: 40%;
+  }
+  .add-products .formbox {
+    width: 30%;
+  }
+  .register .container form {
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+/* Tablets and small laptops */
+@media screen and (min-width: 701px) and (max-width: 1100px) {
+  .container {
+    width: 60%;
+  }
+  .navbar {
+    flex-wrap: wrap;
+  }
+  .navbar .logo,
+  .navbar .links {
+    width: 50%;
+  }
+  .navbar .logo img {
+    width: 12vw;
+  }
+  .btun button {
+    width: 18vw;
+  }
+  .products .card {
+    width: 28%;
+  }
+  .products .card .image img {
+    width: 16vw;
+  }
+  .products .card .rateandprice .rate h6,
+  .viewmore .card .right .rateandprice .rate h6 {
+    width: 5vw;
+  }
+  .products .card button {
+    width: 15vw;
+  }
+  .category {
+    flex-wrap: wrap;
+    gap: 14px;
+    padding: 0 3vw;
+  }
+  .category button {
+    padding: 1.5vh 2.5vw;
+  }
+  .viewmore .card {
+    width: 92%;
+    height: auto;
+    min-height: 70vh;
+  }
+  .viewmore .card .right .head h4 {
+    font-size: 28px;
+  }
+  .viewmore .card .right .btn button {
+    width: 18vw;
+  }
+  .add-products .formbox {
+    width: 55%;
+    height: auto;
+    min-height: 80vh;
+    padding-bottom: 3vh;
+  }
+  .add-products .formbox form .inputfeild input,
+  .add-products .formbox form .inputfeild select {
+    width: 38vw;
+  }
+  .add-products .formbox form .butn button {
+    width: 22vw;
+  }
+  .register .container form {
+    width: 90%;
+  }
+  .register .container form label {
+    gap: 16px;
+  }
+  .register .container form label input {
+    width: 30vw;
+  }
+  .register .container form .btn button {
+    width: 22vw;
+  }
+  .sm-navbar {
+    flex-wrap: wrap;
+  }
+  .sm-header-search {
+    width: 32%;
+    min-width: 160px;
+  }
+  .sm-nav-links {
+    gap: 12px;
+  }
+  .sm-hero {
+    gap: 20px;
+  }
+  .sm-category-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .sm-product-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  .sm-deals {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .sm-deal-main {
+    grid-column: 1 / -1;
+  }
+}
+/* Mobile phones */
+@media screen and (max-width: 700px) {
+  .landing_page {
+    min-height: 100svh;
+    height: auto;
+    width: 100%;
+    padding: 20px 0;
+  }
+  .container {
+    width: 92%;
+    height: auto;
+    min-height: 85vh;
+  }
+  #togglebox {
+    height: 12vh;
+  }
+  #togglebox .toggle {
+    width: min(75%, 300px);
+    height: 6vh;
+  }
+  #togglebox .toggle button {
+    font-size: 14px;
+  }
+  .loginbox {
+    height: auto;
+    min-height: 65vh;
+  }
+  .loginbox .flip-card {
+    width: 92%;
+    min-height: 480px;
+    height: auto;
+  }
+  .loginbox .flip-card .login-face {
+    padding: 28px 16px;
+  }
+  .loginbox .flip-card .login-face form input {
+    width: 95%;
+    min-height: 44px;
+    height: auto;
+    padding: 12px;
+    font-size: 16px;
+    margin: 22px auto;
+  }
+  .loginbox .flip-card .login-face form button {
+    width: 75%;
+    min-height: 44px;
+    height: auto;
+    padding: 10px;
+    font-size: 16px;
+    margin: 22px auto;
+  }
+  .navbar {
+    flex-wrap: wrap;
+  }
+  .navbar .logo {
+    width: 100%;
+    height: auto;
+    justify-content: center;
+  }
+  .navbar .logo img {
+    width: 22vw;
+    height: 10vh;
+    margin: 0 2vw;
+    object-fit: contain;
+  }
+  .navbar .links {
+    width: 100%;
+    height: auto;
+  }
+  .navbar .links ul {
+    flex-wrap: wrap;
+    gap: 14px;
+    padding: 12px;
+  }
+  .navbar .links ul li a {
+    font-size: 14px;
+  }
+  .btun {
+    text-align: center;
+  }
+  .btun button {
+    margin: 12px auto;
+    width: 45vw;
+    min-height: 42px;
+    height: auto;
+    padding: 10px;
+    font-size: 15px;
+  }
+  .products {
+    gap: 12px;
+    padding: 0 3vw 4vh;
+  }
+  .products .card {
+    width: calc(50% - 12px);
+    min-width: 0;
+    padding: 10px;
+    margin: 1vh 0;
+  }
+  .products .card .image img {
+    width: 100%;
+    max-width: 140px;
+    height: 18vh;
+    object-fit: contain;
+  }
+  .products .card h2 {
+    height: auto;
+    min-height: 50px;
+    margin: 10px 0;
+    font-size: 13px;
+  }
+  .products .card .rateandprice {
+    gap: 8px;
+    align-items: flex-start;
+  }
+  .products .card .rateandprice .rate h5 {
+    font-size: 12px;
+  }
+  .products .card .rateandprice .rate h6 {
+    width: auto;
+    min-width: 38px;
+    height: 28px;
+    padding: 0 5px;
+    font-size: 11px;
+  }
+  .products .card .rateandprice .price {
+    font-size: 12px;
+  }
+  .products .card button {
+    width: 100%;
+    min-height: 38px;
+    height: auto;
+    padding: 8px 4px;
+    font-size: 12px;
+  }
+  .category {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    padding: 0 4vw;
+  }
+  .category button {
+    padding: 12px 14px;
+    font-size: 12px;
+  }
+  .viewmore .card {
+    display: flex;
+    flex-direction: column;
+    width: 92%;
+    height: auto;
+    min-height: 0;
+    padding-bottom: 20px;
+  }
+  .viewmore .card .left,
+  .viewmore .card .right {
+    width: 100%;
+  }
+  .viewmore .card .left .image {
+    min-height: 260px;
+    padding: 20px;
+  }
+  .viewmore .card .left .image img {
+    width: 100%;
+    max-width: 260px;
+    height: 30vh;
+    object-fit: contain;
+  }
+  .viewmore .card .right {
+    padding: 16px;
+  }
+  .viewmore .card .right .head {
+    gap: 12px;
+    align-items: flex-start;
+  }
+  .viewmore .card .right .head h4 {
+    margin: 0;
+    padding: 0;
+    font-size: 22px;
+  }
+  .viewmore .card .right p {
+    margin: 20px 0;
+  }
+  .viewmore .card .right .rateandprice {
+    gap: 12px;
+  }
+  .viewmore .card .right .rateandprice .rate h6 {
+    width: auto;
+    min-width: 40px;
+    height: 30px;
+    padding: 0 6px;
+  }
+  .viewmore .card .right .btn {
+    height: auto;
+    min-height: 60px;
+  }
+  .viewmore .card .right .btn button {
+    width: 42%;
+    min-height: 42px;
+    height: auto;
+    padding: 8px;
+  }
+  .add-products .formbox {
+    width: 92%;
+    height: auto;
+    min-height: 0;
+    padding-bottom: 24px;
+  }
+  .add-products .formbox .head {
+    gap: 10px;
+    align-items: center;
+  }
+  .add-products .formbox form .inputfeild input,
+  .add-products .formbox form .inputfeild select {
+    width: 84%;
+    min-height: 42px;
+    height: auto;
+    padding: 10px 12px;
+    font-size: 15px;
+  }
+  .add-products .formbox form .butn button {
+    width: 55%;
+    min-height: 42px;
+    height: auto;
+    padding: 10px;
+    font-size: 15px;
+  }
+  .register .container {
+    width: 100%;
+    margin-top: 20px;
+    padding: 0 4vw;
+  }
+  .register .container form {
+    width: 100%;
+    padding: 20px 14px;
+  }
+  .register .container form label {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
+    margin: 18px auto;
+  }
+  .register .container form label input {
+    width: 100%;
+    min-height: 42px;
+    height: auto;
+    padding: 10px 12px;
+  }
+  .register .container form .btn {
+    height: auto;
+    min-height: 60px;
+  }
+  .register .container form .btn button {
+    width: 55%;
+    min-height: 42px;
+    height: auto;
+    padding: 10px;
+  }
+  .shopmoree {
+    width: 100%;
+    overflow-x: clip;
+  }
+  .sm-navbar {
+    gap: 12px;
+  }
+  .sm-header-search {
+    order: 3;
+    width: 100%;
+    min-width: 0;
+  }
+  .sm-nav-links {
+    flex-wrap: wrap;
+  }
+  .sm-nav-links a {
+    white-space: nowrap;
+  }
+  .sm-hero {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .sm-hero-visual {
+    width: 100%;
+    min-width: 0;
+  }
+  .sm-category-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .sm-deals {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .sm-deal-main {
+    grid-column: auto;
+  }
+  .sm-product-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .sm-footer {
+    align-items: center;
+    text-align: center;
+  }
+}
+/* Very small phones */
+@media screen and (max-width: 380px) {
+  .container {
+    width: 96%;
+  }
+  .loginbox .flip-card {
+    width: 96%;
+  }
+  .products .card {
+    width: calc(50% - 8px);
+    padding: 7px;
+  }
+  .products .card .image img {
+    max-width: 110px;
+  }
+  .products .card h2 {
+    font-size: 12px;
+  }
+  .category button {
+    padding: 10px;
+  }
+  .viewmore .card .right .head h4 {
+    font-size: 19px;
+  }
+  .add-products .formbox {
+    width: 96%;
+  }
+  .register .container {
+    padding: 0 2vw;
+  }
+  .sm-product-grid {
+    gap: 8px;
   }
 }
