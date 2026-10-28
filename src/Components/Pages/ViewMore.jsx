@@ -1,6 +1,6 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import { useNavigate, useParams } from "react-router-dom";
+import { useLocation, useNavigate, useParams } from "react-router-dom";
 import { toast } from "react-toastify";
 
 const ViewMore = () => {
@@ -13,30 +13,33 @@ const ViewMore = () => {
       `http://localhost:4000/products/${prodid}`,
     );
     setProduct(apiresid.data);
-    toast.info("All Data")
+    toast.info("All Data");
   };
   useEffect(() => {
     viewmorecall();
   }, []);
 
-  let { id, title, price, image,rating ,category, description } = product;
+  let { id, title, price, image, rating, category, description } = product;
 
   const navi = useNavigate();
+  const location = useLocation();
+  const bool = location.pathname.startsWith("/adminportal/");
   const close = () => {
-    navi("/adminportal/products");
+    {
+      bool ? navi("/adminportal/products") : navi("/usersportal/products");
+    }
   };
 
-  const del = async (id)=>{
-    let bool = window.confirm("Do you want to delete this product")
-    if(bool){
-      await axios.delete(`http://localhost:4000/products/${id}`)
-      toast.error("Product Deleted")
-      navi('/adminportal/products')
+  const del = async (id) => {
+    let bool = window.confirm("Do you want to delete this product");
+    if (bool) {
+      await axios.delete(`http://localhost:4000/products/${id}`);
+      toast.error("Product Deleted");
+      navi("/adminportal/products");
+    } else {
+      toast.warn("Product Not Deleted");
     }
-    else{
-      toast.warn("Product Not Deleted")
-    }
-  }
+  };
 
   return (
     <div className="viewmore">
@@ -62,7 +65,9 @@ const ViewMore = () => {
             <div className="price">Rs. {Math.round(price * 90)}.00</div>
           </div>
           <div className="btn">
-            <button onClick={()=>del(id)}>Delete</button>
+            {bool 
+              ? <button onClick={() => del(id)}>Delete</button>
+              : <button >Add To Cart</button>}
           </div>
         </div>
       </div>

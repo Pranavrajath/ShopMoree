@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import AdminLogin from "./Admin/AdminLogin";
 import UsersLogin from "./Users/UsersLogin";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const LandingPage = () => {
   const [bool, setBool] = useState(true);
+  const navigate = useNavigate();
   
   const handleBool = () => {
     setBool(!bool);
@@ -27,6 +28,7 @@ const LandingPage = () => {
                 <AdminLogin />
                 <div className="forgotpass">
                   <Link>Forgot Password</Link>
+                  <button onClick={()=>navigate('/adminportal/register')}>Register</button>
                 </div>
               </div>
 
@@ -34,6 +36,7 @@ const LandingPage = () => {
                 <UsersLogin />
                 <div className="forgotpass">
                   <Link>Forgot Password</Link>
+                  <button onClick={()=>navigate('/adminportal/register')}>Register</button>
                 </div>
               </div>
             </div>

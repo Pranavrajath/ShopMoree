@@ -1,6 +1,6 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 const Products = () => {
   const [products, setProducts] = useState([]);
@@ -13,10 +13,15 @@ const Products = () => {
     fetchApi();
   }, []);
   const navigate = useNavigate();
-  const viewMore = (prodid) => {
-    navigate(`/adminportal/viewmore/${prodid}`);
-  }; 
-
+  const location = useLocation();
+  const bool = location.pathname.startsWith("/adminportal");
+  const viewMore = (prodid, title) => {
+    {
+      bool
+        ? navigate(`/adminportal/viewmore/${prodid}`)
+        : navigate(`/usersportal/viewmore/${prodid}`);
+    }
+  };
 
   //Category
   const [filterCategory, setFilterCategory] = useState(products);
@@ -29,7 +34,7 @@ const Products = () => {
   ];
   //  const BEstud = StudentDB.filter((student)=>{
   //       return student.course === "BE"
-  //   })    
+  //   })
   const filterCat = (e) => {
     let category = e.target.innerText;
     if (category === "All") {
@@ -40,7 +45,7 @@ const Products = () => {
       });
       setFilterCategory(filterData);
     }
-  }
+  };
   useEffect(() => {
     setFilterCategory(products);
   }, [products]);
@@ -48,21 +53,27 @@ const Products = () => {
   return (
     <>
       <div className="btun">
-        <button
-          onClick={() => {
-            navigate("/adminportal/addproduct");
-          }} 
-        >
-          Add Product
-        </button>
+        {bool ? (
+          <button
+            onClick={() => {
+              navigate("/adminportal/addproduct");
+            }}
+          >
+            Add Product
+          </button>
+        ) : (
+          <></>
+        )}
       </div>
 
       <div className="category">
-          {allcategory.map((ele,index)=>{
-            return(
-              <button key={index} onClick={filterCat}>{ele}</button>
-            )
-          })}
+        {allcategory.map((ele, index) => {
+          return (
+            <button key={index} onClick={filterCat}>
+              {ele}
+            </button>
+          );
+        })}
       </div>
 
       <div className="products">

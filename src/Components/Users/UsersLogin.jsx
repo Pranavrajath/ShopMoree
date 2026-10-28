@@ -83,7 +83,7 @@ let [formData,setformData] = useState({emailfield : "",passwordfield:""})
 
           <button>Users Login</button>
         </form>
-        <button onClick={()=>navigate('/adminportal/register')}>Register</button>
+        
       </div>
     </>
   );

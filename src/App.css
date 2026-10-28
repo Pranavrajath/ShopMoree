@@ -125,18 +125,42 @@
             }
           }
         }
+        button{
+        height: 7vh;
+        width: 50%;
+        border: none;
+        box-shadow: 0 0 20px;
+        cursor: pointer;
+        transition: all 0.5s;
+        border-radius: 50px;
+        font-size: 18px;
+        font-weight: bold;
+        color: #1b2923;
+        background-color: #10b981;
+        }
       }
 
       .back {
         transform: rotateY(180deg);
+        
       }
     }
     .forgotpass {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
       a {
         text-decoration: none;
         color: white;
         &:hover {
           text-decoration: underline;
+        }
+      }
+      button{
+        transition: all .2s;
+        &:hover{
+          color: white;
+          box-shadow: 0 0 20px white;
         }
       }
     }
@@ -2259,5 +2283,17 @@
 @media (min-width: 1101px) {
   .registereduser table {
     width: 80%;
+  }
+}
+
+.pagenotfound{
+  #num{
+    margin-top: 30vh;
+    font-size: 100px;
+    text-align: center;
+  }
+  #text{
+    font-size: 50px;
+    text-align: center;
   }
 }
