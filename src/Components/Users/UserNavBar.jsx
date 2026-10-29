@@ -13,6 +13,9 @@ const UserNavBar = () => {
           <NavLink to="/usersportal/products">Products</NavLink>
         </li>
         <li>
+          <NavLink to="/usersportal/cart">Cart</NavLink>
+        </li>
+        <li>
           <NavLink to="/">Log Out</NavLink>
         </li>
       </ul>

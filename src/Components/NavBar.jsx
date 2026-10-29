@@ -8,7 +8,7 @@ const NavBar = () => {
   // useLocation is present in react-router dom which is used to get the complete path and
   // it retruns object
   const location = useLocation();
-  const bool = location.pathname.startsWith("/adminportal/");
+  const bool = location.pathname.startsWith("/adminportal");
 
   return (
     <div className="navbar">

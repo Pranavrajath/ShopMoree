@@ -5,6 +5,7 @@ import NavBar from "../NavBar";
 import React from "react";
 import { Route, Routes } from "react-router-dom";
 import PageNotFound from "../Pages/PageNotFound";
+import Cart from "../Pages/Cart";
 
 const UsersPortal = () => {
   return (
@@ -15,6 +16,7 @@ const UsersPortal = () => {
         <Route element={<Products />} path="/products" />
         <Route element={<ViewMore />} path="/viewmore/:id" />
         <Route element={<PageNotFound />} path="*" />
+        <Route element={<Cart />} path="/cart"/>
       </Routes>
     </>
   );
