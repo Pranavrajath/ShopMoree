@@ -105,7 +105,7 @@ The main objective of ShopMoree is to develop a responsive and user-friendly e-c
 
 **Pranav Rajath M**
 
-- GitHub: [Your GitHub Profile](https://github.com/Pranavrajath)
+- GitHub: [Pranav Rajath M - github](https://github.com/Pranavrajath)
 - Portfolio: [My Portfolio](https://pranavrajath-portfolio.netlify.app)
 
 ---
